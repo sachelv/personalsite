@@ -12,7 +12,7 @@ export default function HomePage() {
 
   return (
     <div
-      className="flex flex-col gap-3 max-h-[50vh] overflow-y-auto md:max-h-none md:overflow-visible"
+      className="flex flex-col gap-3 max-h-[40vh] overflow-y-auto md:max-h-none md:overflow-visible"
       style={{ maxWidth: "420px" }}
     >
       <p>Hi! I&rsquo;m Samuel.</p>
