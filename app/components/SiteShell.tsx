@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCrystal, REVEAL_DURATION } from "./CrystalProvider";
@@ -23,15 +22,6 @@ export default function SiteShell({
 }) {
   const { currentStructure, phase, crystalOpacity, contentOpacity } =
     useCrystal();
-
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
 
   const interactive =
     phase !== "shuffling" && phase !== "settling" && contentOpacity > 0;
@@ -59,7 +49,7 @@ export default function SiteShell({
         className="relative z-10 min-h-screen"
         style={{
           opacity: contentOpacity,
-          transition: `opacity ${contentOpacity > 0 ? REVEAL_DURATION : 150}ms ease-in-out ${contentOpacity > 0 && isMobile ? "1s" : "0s"}`,
+          transition: `opacity ${contentOpacity > 0 ? REVEAL_DURATION : 150}ms ease-in-out ${contentOpacity > 0 ? "1s" : "0s"}`,
           pointerEvents: "none",
         }}
       >
