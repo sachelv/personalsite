@@ -15,7 +15,7 @@ import CrystalStructureView, {
 const CAMERA_DIST = 14;
 const CAMERA_FOV = 50;
 const USER_IDLE_TIMEOUT = 3000;
-const MAX_TOTAL_ATOMS = 1800;
+const MAX_TOTAL_ATOMS = 2000;
 const EXPAND_STEP_MS = 150;
 
 /**

@@ -11,7 +11,10 @@ export default function HomePage() {
   }, [triggerShuffle]);
 
   return (
-    <div className="flex flex-col gap-3" style={{ maxWidth: "420px" }}>
+    <div
+      className="flex flex-col gap-3 max-h-[50vh] overflow-y-auto md:max-h-none md:overflow-visible"
+      style={{ maxWidth: "420px" }}
+    >
       <p>Hi! I&rsquo;m Samuel.</p>
 
       <p>
