@@ -75,7 +75,7 @@ const chronology: { years: string; bullets: Bullet[] }[] = [
     years: "sophomore year",
     bullets: [
       "Spent fall at a fusion startup, but decided AI for materials is the most interesting thing for me to work on",
-      "Came back and started studying physics and focusing on research",
+      "Came back and started studying physics and focusing on ml research",
       "Realized I've never learned to truly work hard. Actively trying to push myself harder.",
       "to be continued...",
     ],
