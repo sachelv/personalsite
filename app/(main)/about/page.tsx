@@ -1,9 +1,8 @@
 export default function AboutPage() {
   return (
     <div>
-      <p className="mb-3" style={{ maxWidth: "480px" }}>
-        I&rsquo;m still not quite sure what I&rsquo;m about. Maybe I never will
-        be. Thus far, I&rsquo;ve gathered that I enjoy being around people I
+      <p className="mb-3" style={{ maxWidth: "600px" }}>
+        I&rsquo;m still not quite sure what I&rsquo;m about, but I'm figuring out more every day. Thus far, I&rsquo;ve gathered that I enjoy being around people I
         trust and admire, I&rsquo;m often delusional, and I want to do great
         things.
       </p>
@@ -54,7 +53,7 @@ const chronology: { years: string; bullets: Bullet[] }[] = [
         ],
       },
       "Started doing materials research with Clemens Heske at UNLV and Miriam Rafailovich at Stony Brook",
-      "Won some science fairs and pitch comps, got really into tennis, joined mariachi and learned violin (my high school was 60% hispanic)",
+      "Won some science fairs and pitch comps, got really into tennis and climbing, joined mariachi and learned violin",
       {
         text: "Got into college had to pick between Stanford, Penn M&T, and a full-ride to Vanderbilt",
         sub: [
@@ -76,7 +75,7 @@ const chronology: { years: string; bullets: Bullet[] }[] = [
     bullets: [
       "Spent fall at a fusion startup, but decided AI for materials is the most interesting thing for me to work on",
       "Came back and started studying physics and focusing on ml research",
-      "Realized I've never learned to truly work hard. Actively trying to push myself harder.",
+      "Realized I've never learned to work as hard as my goals require. Actively trying to push myself harder.",
       "to be continued...",
     ],
   },
@@ -84,21 +83,21 @@ const chronology: { years: string; bullets: Bullet[] }[] = [
 
 function Chronology() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-2.5">
       {chronology.map((entry) => (
         <div key={entry.years}>
           <p className="font-bold mb-0.5">{entry.years}</p>
-          <ul className="list-none p-0 m-0 flex flex-col gap-0.5">
+          <ul className="list-none p-0 m-0 flex flex-col">
             {entry.bullets.map((bullet, i) => {
               const text = typeof bullet === "string" ? bullet : bullet.text;
               const sub = typeof bullet === "string" ? null : bullet.sub;
               return (
                 <li key={i}>
-                  <span>- {text}</span>
+                  <span className="md:whitespace-nowrap">- {text}</span>
                   {sub && (
-                    <ul className="list-none p-0 m-0 pl-6 flex flex-col gap-0.5">
+                    <ul className="list-none p-0 m-0 pl-6 flex flex-col">
                       {sub.map((s, j) => (
-                        <li key={j}>- {s}</li>
+                        <li key={j} className="md:whitespace-nowrap">- {s}</li>
                       ))}
                     </ul>
                   )}

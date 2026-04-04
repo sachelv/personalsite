@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCrystal, REVEAL_DURATION } from "./CrystalProvider";
 import { getElementInfo } from "@/app/lib/element-data";
 
@@ -20,6 +21,7 @@ export default function SiteShell({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   const { currentStructure, phase, crystalOpacity, contentOpacity } =
     useCrystal();
 
@@ -53,16 +55,13 @@ export default function SiteShell({
           pointerEvents: "none",
         }}
       >
-        <div className="flex items-start pt-4 px-4">
-          {/* Sidebar nav */}
+        <div className="flex flex-col px-3 pt-8 md:flex-row md:items-start md:pt-4 md:pl-4 md:pr-0">
+          {/* Nav — horizontal on mobile, vertical sidebar on desktop */}
           <nav
-            className="flex-shrink-0 px-4 py-4"
-            style={{
-              backgroundColor: CARD_BG,
-              borderRadius: "8px 0 0 8px",
-            }}
+            className="flex-shrink-0 px-4 py-2 md:py-4 rounded-t-lg md:rounded-tr-none md:rounded-bl-lg"
+            style={{ backgroundColor: CARD_BG }}
           >
-            <ul className="flex flex-col gap-1 list-none p-0 m-0">
+            <ul className="flex flex-row md:flex-col gap-3 md:gap-1 list-none p-0 m-0">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -83,10 +82,9 @@ export default function SiteShell({
 
           {/* Main content card */}
           <main
-            className="px-7 py-6 flex-1 min-w-0"
+            className="px-7 py-6 rounded-b-lg md:rounded-tr-lg md:rounded-bl-lg md:w-fit"
             style={{
               backgroundColor: CARD_BG,
-              borderRadius: "0 8px 8px 8px",
               pointerEvents: interactive ? "auto" : "none",
             }}
           >
@@ -96,9 +94,9 @@ export default function SiteShell({
       </div>
 
       {/* Element legend */}
-      {interactive && currentStructure && (
+      {interactive && currentStructure && pathname !== "/about" && (
         <div
-          className="fixed bottom-4 right-4 z-10 flex flex-col gap-1 rounded-lg px-3 py-2"
+          className="hidden md:flex fixed bottom-4 right-4 z-10 flex-col gap-1 rounded-lg px-3 py-2"
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.85)",
             pointerEvents: "auto",

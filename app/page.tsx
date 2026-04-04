@@ -12,8 +12,8 @@ export default function HomePage() {
 
   return (
     <div
-      className="flex flex-col gap-3 max-h-[40vh] overflow-y-auto md:max-h-none md:overflow-visible"
-      style={{ maxWidth: "420px" }}
+      className="flex flex-col gap-3 max-h-[58vh] overflow-y-auto md:max-h-none md:overflow-visible"
+      style={{ maxWidth: "440px" }}
     >
       <p>Hi! I&rsquo;m Samuel.</p>
 
@@ -33,15 +33,20 @@ export default function HomePage() {
       </p>
 
       <p>
+        Outside of school and work, I enjoy climbing, traveling, and doing things I'll remember.
+        My latest trial hobbies are photography and DJing.
+      </p>
+
+      <p>
         The material in the background is{" "}
-        {currentStructure ? currentStructure.formula : "..."} (try dragging!). 
+        {currentStructure ? currentStructure.formula : "..."}. 
       </p>
 
       <img
         src="/headshot.jpg"
         alt="Samuel Chen"
         className="mt-2 rounded"
-        style={{ width: "400px", height: "auto" }}
+        style={{ width: "360px", height: "auto" }}
       />
 
       <div className="flex items-center gap-4 mt-2">
@@ -70,7 +75,7 @@ export default function HomePage() {
           style={{ pointerEvents: "auto" }}
         >
           <svg
-            xmlns="https://x.com/samchenn_"
+            xmlns="http://www.w3.org/2000/svg"
             width="22"
             height="22"
             viewBox="0 0 24 24"
@@ -80,7 +85,7 @@ export default function HomePage() {
           </svg>
         </a>
         <a
-          href="https://x.com/YOUR_HANDLE"
+          href="https://x.com/samchenn_"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-gray-800 transition-colors"
