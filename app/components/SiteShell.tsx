@@ -88,7 +88,7 @@ export default function SiteShell({
               backgroundColor: CARD_BG,
               borderRadius: "0 8px 8px 8px",
               pointerEvents: interactive ? "auto" : "none",
-              maxWidth: "600px",
+              width: "fit-content",
             }}
           >
             {children}

@@ -5,9 +5,11 @@ export default function CharacteristicFlawsPage() {
         className="text-sm font-bold mb-4"
         style={{ color: "var(--heading-accent)" }}
       >
-        Characteristic flaws in autonomous materials discovery
+        Characterizing what&rsquo;s missing in autonomous materials discovery
       </h1>
-      <p className="text-gray-500 text-xs">coming soon.</p>
+      <article className="prose prose-sm max-w-none">
+        <p>PASTE_ESSAY_HERE</p>
+      </article>
     </div>
   );
 }

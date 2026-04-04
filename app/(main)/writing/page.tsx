@@ -12,7 +12,7 @@ export default function WritingPage() {
       <ul className="list-none p-0 m-0 flex flex-col gap-1">
         <li>
           <Link href="/writing/characteristic-flaws" className="text-xs">
-            Characteristic flaws in autonomous materials discovery
+            Characterizing what&rsquo;s missing in autonomous materials discovery
           </Link>
         </li>
       </ul>
