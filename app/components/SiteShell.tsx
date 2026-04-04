@@ -53,7 +53,7 @@ export default function SiteShell({
           pointerEvents: "none",
         }}
       >
-        <div className="flex items-start pt-4 pl-4">
+        <div className="flex items-start pt-4 px-4">
           {/* Sidebar nav */}
           <nav
             className="flex-shrink-0 px-4 py-4"
@@ -83,12 +83,11 @@ export default function SiteShell({
 
           {/* Main content card */}
           <main
-            className="px-7 py-6"
+            className="px-7 py-6 flex-1 min-w-0"
             style={{
               backgroundColor: CARD_BG,
               borderRadius: "0 8px 8px 8px",
               pointerEvents: interactive ? "auto" : "none",
-              width: "fit-content",
             }}
           >
             {children}

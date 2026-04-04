@@ -94,11 +94,11 @@ function Chronology() {
               const sub = typeof bullet === "string" ? null : bullet.sub;
               return (
                 <li key={i}>
-                  <span className="whitespace-nowrap">- {text}</span>
+                  <span>- {text}</span>
                   {sub && (
                     <ul className="list-none p-0 m-0 pl-6 flex flex-col gap-0.5">
                       {sub.map((s, j) => (
-                        <li key={j} className="whitespace-nowrap">- {s}</li>
+                        <li key={j}>- {s}</li>
                       ))}
                     </ul>
                   )}
