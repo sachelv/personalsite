@@ -8,7 +8,7 @@ export default function CharacteristicFlawsPage() {
         Characterizing what&rsquo;s missing in autonomous materials discovery
       </h1>
       <article className="prose prose-sm max-w-none">
-        <p>PASTE_ESSAY_HERE</p>
+        <p>coming soon.</p>
       </article>
     </div>
   );
