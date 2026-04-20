@@ -40,7 +40,8 @@ export default function CharacteristicFlawsPage() {
           My read after spending time working on ML for materials is that the researchers in
           the space are treating materials discovery as a search problem, working on
           generative models that can propose new materials with desired properties and
-          self-driving labs that can rapidly carry out experiments. This will not be enough.
+          self-driving labs that can rapidly carry out experiments.{" "}
+          <span className="italic">These approaches will not be enough.</span>{" "}
           Although high-throughput and data-driven methods may have a part to play, when I 
           think of breakthroughs in Li-ion batteries, 2D materials, perovskites, and catalysis,
           they took years of meticulous, collaborative, creative research where insight was 
