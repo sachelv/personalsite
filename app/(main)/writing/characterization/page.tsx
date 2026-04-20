@@ -693,7 +693,7 @@ export default function CharacteristicFlawsPage() {
         </p>
 
         <p>
-          I&rsquo;d like to thank Sam and Elena from ReGen, Andy Anker, Jehad Abed, Mike Mettler, Johannes Voss, Agniv Sarkar, James
+          I&rsquo;d like to thank Sam and Elena from ReGen, Andy Anker, Mike Mettler, Johannes Voss, Agniv Sarkar, James
           Liu, Joe Li, and Danica Sun for their valuable feedback on this essay.
         </p>
 
