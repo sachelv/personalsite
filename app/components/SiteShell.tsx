@@ -66,7 +66,7 @@ export default function SiteShell({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1.5 text-xs"
+                    className="flex items-center gap-1.5 text-sm"
                     style={{
                       color: "var(--nav-link-color)",
                       pointerEvents: interactive ? "auto" : "none",

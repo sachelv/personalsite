@@ -8,6 +8,7 @@ import {
   useCallback,
   useEffect,
 } from "react";
+import { usePathname } from "next/navigation";
 import type { CrystalStructure } from "@/app/lib/types";
 import type { AnimationPhase } from "@/app/lib/types";
 
@@ -50,16 +51,23 @@ export function useCrystal() {
 }
 
 export function CrystalProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  // On the initial mount, if we're landing on the home page, start in the
+  // "shuffling" visual state (content hidden, crystal visible) so the page
+  // text never flashes before the shuffle kicks in. We intentionally only
+  // read the pathname once via useState's lazy initializer — subsequent
+  // navigations go through triggerShuffle/normal state updates.
+  const initialIsHome = typeof pathname === "string" && pathname === "/";
   const [allStructures, setAllStructures] = useState<CrystalStructure[]>([]);
   const [shuffleSequence, setShuffleSequence] = useState<number[]>([]);
   const [seqPos, setSeqPos] = useState(0);
   const [phase, setPhase] = useState<AnimationPhase>("loading");
-  const [crystalOpacity, setCrystalOpacity] = useState(0);
-  const [contentOpacity, setContentOpacity] = useState(1);
+  const [crystalOpacity, setCrystalOpacity] = useState(initialIsHome ? 1 : 0);
+  const [contentOpacity, setContentOpacity] = useState(initialIsHome ? 0 : 1);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const shuffleRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const dataRef = useRef<CrystalStructure[]>([]);
-  const pendingShuffleRef = useRef(false);
+  const pendingShuffleRef = useRef(initialIsHome);
 
   const doShuffle = useCallback((data: CrystalStructure[]) => {
     setContentOpacity(0);

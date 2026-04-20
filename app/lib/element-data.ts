@@ -4,7 +4,7 @@ interface ElementInfo {
 }
 
 export const ELEMENT_DATA: Record<string, ElementInfo> = {
-  H:  { color: "#FFFFFF", radius: 0.31 },
+  H:  { color: "#FFB6D5", radius: 0.31 },
   He: { color: "#D9FFFF", radius: 0.28 },
   Li: { color: "#CC80FF", radius: 1.28 },
   Be: { color: "#C2FF00", radius: 0.96 },

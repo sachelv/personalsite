@@ -9,12 +9,7 @@ export default function AboutPage() {
 
       <hr className="mb-3 border-t border-gray-400" />
 
-      <h2
-        className="text-sm font-bold mb-2"
-        style={{ color: "var(--heading-accent)" }}
-      >
-        life chronology
-      </h2>
+      <h2 className="text-base font-bold mb-2">life chronology</h2>
 
       <Chronology />
     </div>
