@@ -6,7 +6,7 @@ export default function WritingPage() {
       <h1 className="text-base font-bold mb-3">writing</h1>
       <ul className="list-disc pl-5 m-0 flex flex-col gap-1">
         <li>
-          <Link href="/writing/characteristic-flaws">
+          <Link href="/writing/characterization">
             You Can't Escape a Maze by Running Really Fast (AI for Materials Perspective Piece)
           </Link>
         </li>
