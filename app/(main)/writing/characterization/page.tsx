@@ -550,7 +550,7 @@ export default function CharacteristicFlawsPage() {
           amorphism.
         </p>
 
-        <p>
+        <p className="italic">
           I spent some time trying to use conditional diffusion approaches for XAS (X-ray
           Absorption Spectroscopy) spectrum -&gt; structure generation. XAS is one of the
           most useful techniques for understanding complex, functional materials like
@@ -588,7 +588,7 @@ export default function CharacteristicFlawsPage() {
           more stable material, an MLIP &ldquo;should&rdquo; work with any arrangement.
         </p>
 
-        <p>
+        <p className="italic">
           This approach seems promising, especially after my struggles with the strict
           spectrum guidance pushing the generation off-manifold leaving the diffusion prior
           unable to generate a stable material. However, gradient descent and diffusion
@@ -692,7 +692,7 @@ export default function CharacteristicFlawsPage() {
         </p>
 
         <p>
-          I&rsquo;d like to thank Sam and Elena from ReGen, Andy Anker, Jehad Abed, Agniv Sarkar, James
+          I&rsquo;d like to thank Sam and Elena from ReGen, Andy Anker, Jehad Abed, Mike Mettler, Johannes Voss, Agniv Sarkar, James
           Liu, Joe Li, and Danica Sun for their valuable feedback on this essay.
         </p>
 
