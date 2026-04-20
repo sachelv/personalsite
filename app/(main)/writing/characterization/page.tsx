@@ -32,19 +32,19 @@ export default function CharacteristicFlawsPage() {
             caveats 
           </InlineLink>         
           , materials discovery has a wasteland of failed early stage companies, and many of
-          the frontier lab startups are shifting focus to R&amp;D SaaS or narrowing their
-          materials problem space.
+          the frontier lab startups have struggled to produce tangible results and are shifting 
+          focus to R&amp;D SaaS or narrowing their materials problem space.
         </p>
 
         <p>
           My read after spending time working on ML for materials is that the researchers in
           the space are treating materials discovery as a search problem, working on
           generative models that can propose new materials with desired properties and
-          self-driving labs that can rapidly carry out experiments. Although high-throughput
-          and data-driven methods may have a part to play, when I think of breakthroughs in
-          Li-ion batteries, 2D materials, perovskites, and catalysis, they took years of
-          meticulous, collaborative, creative research where insight was slowly built up
-          through the scientific method.
+          self-driving labs that can rapidly carry out experiments. This will not be enough.
+          Although high-throughput and data-driven methods may have a part to play, when I 
+          think of breakthroughs in Li-ion batteries, 2D materials, perovskites, and catalysis,
+          they took years of meticulous, collaborative, creative research where insight was 
+          slowly built up through the scientific method.
         </p>
 
         <p>
