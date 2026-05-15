@@ -3,7 +3,10 @@ import { InlineLink } from "@/app/components/InlineLink";
 export default function CharacteristicFlawsPage() {
   return (
     <div style={{ maxWidth: "680px" }}>
-      <header className="mb-4">
+      <header className="mb-4 relative pr-16">
+        <p className="absolute right-0 top-0 text-lg font-bold leading-snug no-indent">
+          4/20/2026
+        </p>
         <h1 className="text-lg font-bold mb-1 leading-snug">
           You Can&rsquo;t Escape a Maze by Running Really Fast
         </h1>
@@ -694,7 +697,7 @@ export default function CharacteristicFlawsPage() {
 
         <p>
           I&rsquo;d like to thank Sam and Elena from ReGen, Andy Anker, Mike Mettler, Johannes Voss, Jehad Abed, Agniv Sarkar, James
-          Liu, Joe Li, Danica Sun, and Amy Cao for their valuable feedback on this essay.
+          Liu, Joe Li, and Danica Sun for their valuable feedback on this essay.
         </p>
 
         <hr className="my-4 border-t border-gray-300" />
